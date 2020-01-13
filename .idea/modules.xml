@@ -6,8 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/pocket-storage-api/pocket-storage-api.iml" filepath="$PROJECT_DIR$/pocket-storage-api/pocket-storage-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/pocket-storage-core/pocket-storage-core.iml" filepath="$PROJECT_DIR$/pocket-storage-core/pocket-storage-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/pocket-storage-nms-common/pocket-storage-nms-common.iml" filepath="$PROJECT_DIR$/pocket-storage-nms-common/pocket-storage-nms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pocket-storage-nms-v1.15.1/pocket-storage-nms-v1.15.1.iml" filepath="$PROJECT_DIR$/pocket-storage-nms-v1.15.1/pocket-storage-nms-v1.15.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/pocket-storage-plugin/pocket-storage-plugin.iml" filepath="$PROJECT_DIR$/pocket-storage-plugin/pocket-storage-plugin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pocketstorage-nms-v1.15.1/pocketstorage-nms-v1.15.1.iml" filepath="$PROJECT_DIR$/pocketstorage-nms-v1.15.1/pocketstorage-nms-v1.15.1.iml" />
     </modules>
   </component>
 </project>

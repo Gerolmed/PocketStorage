@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pocketstorage-nms-v1.15.1</artifactId>
+    <artifactId>pocket-storage-nms-v1.15.1</artifactId>
 
     <dependencies>
         <dependency>
