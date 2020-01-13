@@ -21,7 +21,6 @@
         <module>pocket-storage-plugin</module>
         <module>pocket-storage-nms-common</module>
         <module>pocket-storage-core</module>
-        <module>untitled</module>
         <module>pocketstorage-nms-v1.15.1</module>
     </modules>
 
