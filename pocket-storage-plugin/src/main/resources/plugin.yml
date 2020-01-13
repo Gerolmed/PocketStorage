@@ -1,0 +1,5 @@
+name: Pocket Storage
+version: ${project.version}
+main: net.endrealm.pocketstorage.PocketStorage
+api-version: 1.13
+prefix: Pock-Store

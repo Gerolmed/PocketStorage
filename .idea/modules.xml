@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PocketStorage.iml" filepath="$PROJECT_DIR$/PocketStorage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pocket-storage-api/pocket-storage-api.iml" filepath="$PROJECT_DIR$/pocket-storage-api/pocket-storage-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pocket-storage-core/pocket-storage-core.iml" filepath="$PROJECT_DIR$/pocket-storage-core/pocket-storage-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pocket-storage-nms-common/pocket-storage-nms-common.iml" filepath="$PROJECT_DIR$/pocket-storage-nms-common/pocket-storage-nms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pocket-storage-plugin/pocket-storage-plugin.iml" filepath="$PROJECT_DIR$/pocket-storage-plugin/pocket-storage-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pocketstorage-nms-v1.15.1/pocketstorage-nms-v1.15.1.iml" filepath="$PROJECT_DIR$/pocketstorage-nms-v1.15.1/pocketstorage-nms-v1.15.1.iml" />
+    </modules>
+  </component>
+</project>

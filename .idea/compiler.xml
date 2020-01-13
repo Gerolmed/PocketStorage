@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pocket-storage-api" />
+        <module name="pocket-storage-plugin" />
+        <module name="pocket-storage-nms-common" />
+        <module name="pocket-storage-core" />
+        <module name="pocketstorage-nms-v1.15.1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pocket-storage-api" target="1.8" />
+      <module name="pocket-storage-core" target="1.5" />
+      <module name="pocket-storage-nms-common" target="1.5" />
+      <module name="pocket-storage-plugin" target="1.8" />
+      <module name="pocket-storage-plugin (1)" target="1.8" />
+      <module name="PocketStorage" target="1.5" />
+      <module name="pocketstorage-nms-v1.15.1" target="1.5" />
+      <module name="untitled" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
