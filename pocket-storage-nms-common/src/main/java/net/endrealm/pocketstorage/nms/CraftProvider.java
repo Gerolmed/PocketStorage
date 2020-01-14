@@ -1,6 +1,9 @@
 package net.endrealm.pocketstorage.nms;
 
 import lombok.Data;
+import net.endrealm.pocketstorage.api.PocketWorld;
+import net.endrealm.pocketstorage.core.math.Vector3;
+import org.bukkit.Location;
 
 import java.util.regex.Pattern;
 
@@ -14,6 +17,10 @@ public abstract class CraftProvider {
 
     public boolean supports(String version) {
         return supportPattern.matcher(version).find();
+    }
+
+    public void loadWorld(PocketWorld pocketWorld, Location location) {
+        pocketWorld.spawnAt(location.getWorld(), new Vector3(location.getX(), location.getY(), location.getZ()));
     }
 
 }

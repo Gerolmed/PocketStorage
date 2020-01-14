@@ -5,6 +5,7 @@ import net.endrealm.pocketstorage.api.PocketWorld;
 import net.endrealm.pocketstorage.core.math.Vector3;
 import net.endrealm.pocketstorage.nms.PaletteBuilder;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.craftbukkit.v1_15_R1.CraftWorld;
 
@@ -45,5 +46,20 @@ public class CraftPocketWorld implements PocketWorld {
 
     public Material[] getPalette() {
         return palette;
+    }
+
+    @Override
+    public void spawnAt(World world, Vector3 origin) { //TODO make this run over time instead of instant
+        final AtomicInteger tileIndex = new AtomicInteger();
+        origin.loop(bounds, 1,
+                (vec) -> {
+                    Block block = world.getBlockAt(vec.getIntX(), vec.getIntY(), vec.getIntZ());
+                    int index = tiles[tileIndex.get()];
+
+                    block.setType(palette[index]);
+
+                    tileIndex.incrementAndGet();
+                }
+        );
     }
 }
