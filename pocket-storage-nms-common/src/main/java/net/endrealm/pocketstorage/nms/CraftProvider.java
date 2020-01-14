@@ -3,6 +3,7 @@ package net.endrealm.pocketstorage.nms;
 import lombok.Data;
 import net.endrealm.pocketstorage.api.PocketWorld;
 import net.endrealm.pocketstorage.core.math.Vector3;
+import net.endrealm.pocketstorage.core.task.TaskManager;
 import org.bukkit.Location;
 
 import java.util.regex.Pattern;
@@ -11,6 +12,7 @@ import java.util.regex.Pattern;
 public abstract class CraftProvider {
 
     private final Pattern supportPattern;
+    private final TaskManager taskManager;
 
     public abstract void load();
     public abstract void unload();
