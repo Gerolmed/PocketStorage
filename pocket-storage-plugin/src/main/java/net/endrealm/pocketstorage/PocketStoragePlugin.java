@@ -2,6 +2,9 @@ package net.endrealm.pocketstorage;
 
 import lombok.Data;
 import net.endrealm.nms.v1_15_R1.CraftProviderV1_15;
+import net.endrealm.pocketstorage.api.GeneratedPocketWorld;
+import net.endrealm.pocketstorage.api.PocketStorage;
+import net.endrealm.pocketstorage.api.StorageBackend;
 import net.endrealm.pocketstorage.core.task.TaskManager;
 import net.endrealm.pocketstorage.nms.CraftProvider;
 import org.bukkit.Bukkit;
@@ -13,18 +16,22 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.function.Consumer;
 
 @Data
-public final class PocketStorage extends JavaPlugin {
+public final class PocketStoragePlugin extends JavaPlugin implements PocketStorage {
 
     private final CraftProvider[] providers;
     private final TaskManager taskManager;
 
     private final Configuration configuration;
+    private final HashMap<String, StorageBackend> storageBackends;
 
 
-    public PocketStorage() throws IOException {
+    public PocketStoragePlugin() throws IOException {
         taskManager = new TaskManager();
+        storageBackends = new HashMap<>();
         providers = new CraftProvider[] {
                 new CraftProviderV1_15(taskManager)
         };
@@ -36,12 +43,21 @@ public final class PocketStorage extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
+        prepareBackend();
+
         configuration.reloadConfig();
 
         initStorageWorld();
 
         selectProvider();
         Bukkit.getScheduler().runTaskTimer(this, taskManager::execute, 1, 1);
+    }
+
+    private void prepareBackend() {
+        storageBackends.clear();
+
+        //TODO: add backend from file
     }
 
     private void initStorageWorld() {
@@ -117,5 +133,25 @@ public final class PocketStorage extends JavaPlugin {
     @Override
     public ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
         return new VoidGenerator();
+    }
+
+    @Override
+    public StorageBackend getBackend(String backendId) {
+        return storageBackends.get(backendId);
+    }
+
+    @Override
+    public StorageBackend getDefaultBackend() {
+        return storageBackends.get("file"); //TODO replace by config value
+    }
+
+    @Override
+    public void registerBackend(StorageBackend storageBackend) {
+        storageBackends.put(storageBackend.getBackendId(), storageBackend);
+    }
+
+    @Override
+    public void generate(StorageBackend storageBackend, Consumer<GeneratedPocketWorld> onFinish) {
+
     }
 }
