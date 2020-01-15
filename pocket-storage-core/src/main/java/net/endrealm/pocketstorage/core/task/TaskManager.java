@@ -99,14 +99,7 @@ public class TaskManager {
         if(tasks == null)
             return;
 
-        for (Task task : tasks) {
-
-            if(task.getGroup() == null)
-                throw new RuntimeException("Task must have a group assigned!");
-
-            this.tasks.add(task);
-            groups.add(task.getGroup());
-        }
+        scheduleTasks(tasks);
     }
 
     public TaskGroup createTaskGroup(Consumer<Boolean> onFinish, int weight) {
@@ -129,6 +122,22 @@ public class TaskManager {
     public void cancelAll() {
         for (TaskGroup taskGroup : new ArrayList<>(groups)) {
             cancelGroup(taskGroup);
+        }
+    }
+
+    public void scheduleTasks(Iterable<Task> taskList) {
+
+        for (Task task : taskList) {
+
+            if(task.getGroup() == null)
+                throw new RuntimeException("Task must have a group assigned!");
+
+            if(task.getTaskId() < 0) {
+                task.setTaskId(newTaskId());
+            }
+
+            this.tasks.add(task);
+            groups.add(task.getGroup());
         }
     }
 }
