@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.function.Consumer;
 
-@Data
+@Getter
 public final class PocketStoragePlugin extends JavaPlugin implements PocketStorage {
 
     private final CraftProvider[] providers;
