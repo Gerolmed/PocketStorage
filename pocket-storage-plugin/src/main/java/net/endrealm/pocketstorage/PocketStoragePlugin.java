@@ -1,6 +1,6 @@
 package net.endrealm.pocketstorage;
 
-import lombok.Data;
+import lombok.Getter;
 import net.endrealm.nms.v1_15_R1.CraftProviderV1_15;
 import net.endrealm.pocketstorage.api.GeneratedPocketWorld;
 import net.endrealm.pocketstorage.api.PocketStorage;
