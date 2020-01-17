@@ -1,5 +1,7 @@
 > Work in progress
 
+![](https://github.com/Gerolmed/PocketStorage/workflows/Java%20CI/badge.svg)
+
 **A plugin that adds "pocket storages" to your minecraft server. A pocket storage is a room in minecraft that can be 
 accessed at any time. Players can build storages or small houses into them. THis plugin also adds a rich API allowing
 to use this functionality in other plugins.**
